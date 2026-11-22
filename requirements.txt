@@ -1,0 +1,12 @@
+# Dépendances pour exécuter les notebooks hors Kaggle (Python 3.10)
+tensorflow>=2.12
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+h5py
+tables      # lecture HDF5 via pandas.read_hdf
+joblib
+jupyter

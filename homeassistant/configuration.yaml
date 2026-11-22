@@ -1,0 +1,34 @@
+# Extrait de configuration Home Assistant — Axe 1 (acquisition temps réel)
+# Le payload JSON est publié par l'ESP32 sur le topic home/pzem toutes les 6 s :
+# {"voltage":215.0,"current":5.911,"power":1270.1,"energy":8308,"frequency":50.0,"pf":0.98,"ts":1744016400}
+mqtt:
+  sensor:
+    - name: "PZEM Power"
+      state_topic: "home/pzem"
+      value_template: "{{ value_json.power }}"
+      unit_of_measurement: "W"
+      device_class: power
+    - name: "PZEM Voltage"
+      state_topic: "home/pzem"
+      value_template: "{{ value_json.voltage }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+    - name: "PZEM Current"
+      state_topic: "home/pzem"
+      value_template: "{{ value_json.current }}"
+      unit_of_measurement: "A"
+      device_class: current
+    - name: "PZEM Energy"
+      state_topic: "home/pzem"
+      value_template: "{{ value_json.energy }}"
+      unit_of_measurement: "Wh"
+      device_class: energy
+    - name: "PZEM Frequency"
+      state_topic: "home/pzem"
+      value_template: "{{ value_json.frequency }}"
+      unit_of_measurement: "Hz"
+      device_class: frequency
+    - name: "PZEM Power Factor"
+      state_topic: "home/pzem"
+      value_template: "{{ value_json.pf }}"
+      device_class: power_factor

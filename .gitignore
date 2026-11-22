@@ -1,0 +1,18 @@
+# Données et modèles volumineux
+*.h5
+*.hdf5
+*.keras
+*.tflite
+*.pkl
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+# Système
+.DS_Store
+Thumbs.db
+# Secrets (broker MQTT, Wi-Fi)
+secrets.yaml
+passwd

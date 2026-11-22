@@ -1,0 +1,5 @@
+# Axe 2 — affichage des résultats NILM (images PNG exportées depuis Kaggle).
+# Copier les PNG dans /config/www/nilm/ sur le Raspberry Pi (accessibles via /local/nilm/).
+type: picture
+image: /local/nilm/dishwasher_seq2point.png
+alt_text: "Désagrégation lave-vaisselle -- Seq2Point"
